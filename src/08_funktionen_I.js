@@ -93,7 +93,7 @@ function getString(firstName, secondName) {
 }
 
 
-2. Funktionalität: string output
+//2. Funktionalität: string output
 output("hi");
 output("true");
 //output("Hooo");
