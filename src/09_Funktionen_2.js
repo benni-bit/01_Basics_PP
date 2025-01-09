@@ -11,19 +11,35 @@
 const ERROR_Str_Div = "Teilen durch 0 nicht möglich";
 
 // module: division a / b |  test:
- //output(divide(4,2));
- //output(divide(3,2));
- //output(divide(3,-2));
- //output(divide(0,2));
- //output(divide(3,0));
- //output(divide(0,0));
+aoutput(divide(4,2));
+output(divide(3,2));
+output(divide(3,-2));
+output(divide(0,2));
+output(divide(3,0));
+output(divide(0,0));
+function divide(a,b)
+
+function divide(a,b)
+
 function divide(a,b) {
-   if (b != 0) {  // Test
-       return a / b;
-   } else {
-       return ERROR_Str_Div;
-   }
+    if (b == 0) {  // Ausnahme                Die beste Regel auf Ausnahme(n)testen!!!!!!!!!!!!
+        return ERROR_Str_Div;
+        
+    }                   //ternärer operator  return b == 0 ? ERROR_Str_Div : null;  <<<<auch mögliche Lösung
+
+    return a / b;
 }
+
+
+
+
+  // if (b != 0) {  // Test
+ //return a / b;
+  // } else {
+  //     return ERROR_Str_Div;
+  // }
+//}
+//-------------------------------------------------------------------------------------------
 // module: multiplication a * b |  test:
 //output(multiply(3,2));
 //output(multiply(3,-2));
