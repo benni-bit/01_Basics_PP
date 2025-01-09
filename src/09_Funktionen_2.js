@@ -83,7 +83,6 @@ function divide(a,b) {
 	return  a * b;
 }
 
-
 //module: subtraction a -b | test
 function sub(a,b) {
     return a - b;
