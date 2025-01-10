@@ -2,7 +2,7 @@
 /*
 0. a+b | a-b | a*b | a/b  --> Ergebnis c 
 
-1. Dateneingabe + -überprüfung :  check! | ??????
+1. Dateneingabe + -überprüfung :
 2. Auswahl Rechenart : 
 3. Fkt. Grundrechenarten : 
 4. Ausgabe in Konsole : Test>>>>Check Module
@@ -12,7 +12,6 @@ const ERROR_Str_Div = "Teilen durch 0 nicht möglich";
 const ERROR_Str_Cal = "Irgendetwas ging schief!";
 
 const prompt = require('prompt-sync')({sigint: true});
-
 
 startApp();
 function startApp() {
@@ -32,12 +31,6 @@ function getOp() {
     return prompt("OP?: ");
     
 }    
-
-
-    
- 
-
-
 
  //module: calculator | tests:
  //agreement : "+","-","*",":","/"/ output(calculator(3,2,"+"));
@@ -60,8 +53,6 @@ function calculator(a,b,op) {
      case ":":                    // dividieren
      case "/":
         return divide(a,b);
-     
-
 
     default:
         return  ERROR_Str_Cal;  //"Irgendetwas ging schief!";  Besser mit Konstante.man findet Fehlermeldungen/str besser
@@ -69,9 +60,9 @@ function calculator(a,b,op) {
     }
 }
 
-// module: division a / b |  test:
+// module: division a / b 
 //output(divide(4,2));
-// module: division a / b |  test:
+// module: division a / b 
 //output(divide(4,2));
 //output(divide(3,2));
 //output(divide(3,-2));
