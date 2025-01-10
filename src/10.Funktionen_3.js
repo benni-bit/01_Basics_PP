@@ -23,24 +23,24 @@ const INFO_STR_POST_NUM = " number: ";
 let isNotAborted;   // Abbruch mit Strg + C
 
 // application / App
-startApp();
-function startApp() {
-    let num1,num2,op;
-    isNotAborted = true;
+//startApp();
+//function startApp() {
+  //  let num1,num2,op;
+   // isNotAborted = true;
 
-    if (isNotAborted){num1 = getNumber("1st");}
-    if (isNotAborted){op = getOp();}
-    if (isNotAborted){num2 = getNumber("2nd");}
+   // if (isNotAborted){num1 = getNumber("1st");}
+   // if (isNotAborted){op = getOp();}
+  //  if (isNotAborted){num2 = getNumber("2nd");}
     
-    if (isNotAborted){
-        output(calculator(num1,num2,op)); 
-    } else{
-        output(ERROR_STR_ABORT);
-    }
-}
+  //  if (isNotAborted){
+   //     output(calculator(num1,num2,op)); 
+   // } else{
+  //      output(ERROR_STR_ABORT);
+  //  }
+//}
 
 // module: data input | test:
-//  output(getNumber("1st"));
+ output(getNumber("1st"));
 function getNumber(figure) {
 
     let displayStr = INFO_STR_PRE_NUM + figure + INFO_STR_POST_NUM;
@@ -61,7 +61,7 @@ function getNumber(figure) {
 }
 
 // module: input operator | Test:
-// output(getOp());
+    output(getOp());
 function getOp() {
 
     let op = prompt(INFO_STR_OP); 
@@ -148,8 +148,8 @@ function add(a,b) {
 }
 
 // module: console output | test:
-// output("hello");
-// output(2);
+ //output("hello");
+ //output(2);
 function output(outputData) {
   // console.log(typeof outputData);
     if (typeof outputData == "number") {
