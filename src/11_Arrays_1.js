@@ -161,7 +161,9 @@ function getSentenceArr2(arr) {
 
 
 
-}
+
+
+
 
 
 
@@ -174,4 +176,4 @@ function output(outputStr) {
     console.log(outputStr);
 }
 
-
+}
