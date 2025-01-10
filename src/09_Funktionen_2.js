@@ -2,7 +2,7 @@
 /*
 0. a+b | a-b | a*b | a/b  --> Ergebnis c 
 
-1. Dateneingabe + -überprüfung :  
+1. Dateneingabe + -überprüfung :  check! | ??????
 2. Auswahl Rechenart : 
 3. Fkt. Grundrechenarten : 
 4. Ausgabe in Konsole : Test>>>>Check Module
@@ -10,6 +10,35 @@
 
 const ERROR_Str_Div = "Teilen durch 0 nicht möglich";
 const ERROR_Str_Cal = "Irgendetwas ging schief!";
+
+const prompt = require('prompt-sync')({sigint: true});
+
+
+startApp();
+function startApp() {
+    output(calculator(getNum1(),getNum2(),getOp()));
+    
+}
+
+function getNum1() {
+    return parseInt(prompt("Num1?: "));
+
+}
+function getNum2() {
+    return parseInt(prompt("Num2"));
+    
+}
+function getOp() {
+    return prompt("OP?: ");
+    
+}    
+
+
+    
+ 
+
+
+
  //module: calculator | tests:
  //agreement : "+","-","*",":","/"/ output(calculator(3,2,"+"));
  //output(calculator(3,2,"-"));
@@ -37,16 +66,12 @@ function calculator(a,b,op) {
     default:
         return  ERROR_Str_Cal;  //"Irgendetwas ging schief!";  Besser mit Konstante.man findet Fehlermeldungen/str besser
         
+    }
 }
-}
-
-
-
-
 
 // module: division a / b |  test:
 //output(divide(4,2));
-              // module: division a / b |  test:
+// module: division a / b |  test:
 //output(divide(4,2));
 //output(divide(3,2));
 //output(divide(3,-2));
@@ -54,7 +79,7 @@ function calculator(a,b,op) {
 //output(divide(3,0));
 //output(divide(0,0));
 
-                            //  >>>shift+alt+A   kommentieren?????!!!!
+//  >>>shift+alt+A   kommentieren?????!!!!
 
 function divide(a,b) {
     if (b == 0) {  // Ausnahme                Die beste Regel auf Ausnahme(n)testen!!!!!!!!!!!!
@@ -64,9 +89,6 @@ function divide(a,b) {
 
     return a / b;
 }
-
-
-
 
   // if (b != 0) {  // Test
  //return a / b;
