@@ -7,6 +7,17 @@
 
 /*** 02. Theorie: Array */
 
+let arr;
+//arr = new Array();  //Konstruktor
+
+arr = [];          //Literalschreibweise
+arr = [2,11,7,8,10];
+
+output(arr);
+output(arr.length);  //Anzahl der Elemente
+output(arr[0]);      // Index 0 (1.Position im Array)
+output(arr[arr.length -1]);       // letzte Position / allgemein
+
 
 
 
