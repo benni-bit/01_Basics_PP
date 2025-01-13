@@ -18,27 +18,26 @@ const INFO_STR_OP = "Please insert correct operator [ + | - | * | : | / ]: ";
 const INFO_STR_RES = "The result is: ";
 const INFO_STR_PRE_NUM = "Please insert ";
 const INFO_STR_POST_NUM = " number: ";
+  Variable (Global)
+  let isNotAborted;   // Abbruch mit Strg + C
 
-/** Variable (Global)*/
-let isNotAborted;   // Abbruch mit Strg + C
+ application / App
+ /startApp();
+function startApp() {
+   let num1,num2,op;
+    isNotAborted = true;
 
-// application / App
-//startApp();
-//function startApp() {
-  //  let num1,num2,op;
-   // isNotAborted = true;
-
-   // if (isNotAborted){num1 = getNumber("1st");}
-   // if (isNotAborted){op = getOp();}
-  //  if (isNotAborted){num2 = getNumber("2nd");}
+    if (isNotAborted){num1 = getNumber("1st");}
+    if (isNotAborted){op = getOp();}
+   if (isNotAborted){num2 = getNumber("2nd");}
     
-  //  if (isNotAborted){
-   //     output(calculator(num1,num2,op)); 
-   // } else{
-  //      output(ERROR_STR_ABORT);
-  //  }
-//}
-
+    if (isNotAborted){
+        output(calculator(num1,num2,op)); 
+    } else{
+       output(ERROR_STR_ABORT);
+    }
+}
+ 
 // module: data input | test:
  output(getNumber("1st"));
 function getNumber(figure) {
@@ -73,7 +72,7 @@ function getOp() {
     if (op == null){isNotAborted = false;}
     return op;
 }
-
+ 
 // module: check operator | Test:
 // agreement : "+","-","*",":","/"
 // output(isOpNotValid("+"));
@@ -84,8 +83,8 @@ function getOp() {
 // output(isOpNotValid("#?#"));
 // output(isOpNotValid(""));
 function isOpNotValid(op) {
-    return op != "+" && op != "-" && op != "*" && op != ":" && op != "/";
-}
+   return op != "+" && op != "-" && op != "*" && op != ":" && op != "/";
+ }
 
 // module: calculator | tests:
 // agreement : "+","-","*",":"
@@ -139,22 +138,23 @@ function subtract(a,b) {
     return a - b; 
  }
  
-// module: addition a + b |  test:
+ // module: addition a + b |  test:
 // output(add(2,3));
 // output(add(2,-3));
 // output(add(2,0));
 function add(a,b) {
    return a + b; 
 }
-
+ 
 // module: console output | test:
  //output("hello");
  //output(2);
-function output(outputData) {
+ function output(outputData) {
   // console.log(typeof outputData);
     if (typeof outputData == "number") {
         console.log(INFO_STR_RES + outputData); 
     } else {
         console.log(outputData); 
+  
     }
-}
+} 
