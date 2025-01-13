@@ -36,7 +36,7 @@
 
 // OBJEKTE 1 Daten/Funktionen
 
-let person = {
+/* let person = {
                 firstName : "Alexander",
                 familyName : "Pesch",
                 salary : [120000, 160000],
@@ -65,11 +65,32 @@ output(person.sayHello2());
              " und verdiene " + person.salary[1] + " p.a."
 
 output(txt);
+ */
 
 
+/***** Objekte 2 - Hierarchie *******/
+// Tiefer, tiefer - Irgendwo in der Tiefe gibt es ein Licht // K.Bush
+// Der Baikalsee ist mit 1642 m der tiefste See der Erde. ...
+// deep - deeper - deepest
+// nested object {{{}}}
+
+let baikal = {
+                value : "10m",
+                deep : {
+                          deeper :{
+                                     deepest : "Das Licht - auf 1642m!",
+                                     temperatur : "4 Grad Celsius"
+                          }
 
 
+                }
 
+             };
+
+output(baikal);                              //Hierarchietreppe
+output(baikal.value);                   
+output(baikal.deep.deeper.deepest);
+output(baikal.deep.deeper.temperatur);
 
 
 
